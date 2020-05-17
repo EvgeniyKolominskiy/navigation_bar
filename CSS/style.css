@@ -1,29 +1,41 @@
 @import url(reset.css);
 
+* {
+	box-sizing: border-box;
+}
+
 .menu {
 	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-.menuList {
-
+.menu a {
+	text-decoration: none;
 }
 
-.menuLink {
-
+.menu {
+	list-style: none;
 }
 
-.subMenuList {
-
+.link {
+	display: inline-block;
+	color: #ffffff;
+	text-align: center;
+	background-color: #41996f;
+	border: 1px solid #36805d;
 }
 
-.subMenuLink {
-
+.menu__link {
+	display: block;
+	color: inherit;
+	padding: 20px;
+	min-width: 200px;
+	font-size: 1.4rem;
 }
 
-.subSubMenuList {
-
-}
-
-.subSubMenuLink {
+.menu__list {
+	font-size: 0;
 
 }
