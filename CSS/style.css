@@ -20,11 +20,15 @@
 }
 
 .link {
+
+	--border-color-value: #36805d;
+	--background-color-value: #41996f;
+
+	position: relative;
 	display: inline-block;
 	color: #ffffff;
 	text-align: center;
-	background-color: #41996f;
-	border: 1px solid #36805d;
+	border: 1px solid var(--border-color-value);
 }
 
 .menu__link {
@@ -33,9 +37,43 @@
 	padding: 20px;
 	min-width: 200px;
 	font-size: 1.4rem;
+	background-color: var(--background-color-value);
+	z-index: 9999;
 }
 
 .menu__list {
 	font-size: 0;
+}
 
+.link :hover {
+	background-color: var(--border-color-value);
+}
+
+.link:hover > .sub-menu__list-bottom {
+	display: block;
+}
+
+.sub-menu__list {
+	position: absolute;
+	display: none;
+}
+
+.sub-menu__list-bottom {
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+.sub-sub-menu__list {
+	display: none;
+}
+
+.sub-sub-menu__list-right {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.link:hover > .sub-sub-menu__list-right {
+	display: block;
 }
